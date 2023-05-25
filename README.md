@@ -46,13 +46,19 @@ I have not run into any particular issues with the older version of Jekyll, but
 the older version of Liquid lacks a simplified form of inline comments:
 
 ```liquid
+{% comment %}
 {% # This is an inline comment as can be enjoyed in Liquid 5.4+ %}
+{% endcomment %}
 
 {% comment %}
 This is an old-school comment you'll be forced to use if you wanna comment your
 Liquid code when running as a part of the GitHub Pages Jekyll instance.
 {% endcomment %}
 ```
+
+Note that I have wrapped the new syntax style in the old syntax style comment
+because without it, Jekyll would try to interpret the new-style comment and
+the GitHub Pages build would fail! :D
 
 I wish I could use these, but I managed to get by with the old-school version.
 I don't support GitHub is in rush to bump the Jekyll or Liquid version on
