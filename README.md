@@ -103,11 +103,14 @@ There are some extra metadata that find their way there as well but that's not
 important for this post.
 
 To go over the `.gitmodules` file, I include it as part of the Jekyll build
-(Jekyll ignores dotfiles by default) and then use `{% include_relative %}` in a
-`{% capture %}` to store the contents of the file as a string in a varible.
+(Jekyll ignores dotfiles by default) and then use `{? include_relative ?}` in a
+`{? capture ?}` to store the contents of the file as a string in a varible.
 I then parse the string and build pseudo-objects representing the posts.
 I use these objects to render the link list and voila!
 A simple site is born.
+
+Again, note that the Liquid syntax is changed here to use `?` over `%` because
+GitHub Pages tries to interpret the code and fails.
 
 For the future though, I want to make the list of the posts on the main page
 show up in a random order after each new build of the site or maybe even hourly
