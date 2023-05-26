@@ -1,4 +1,4 @@
-# Open Source Encore: LiquidJS
+# Open Source Encore: LiquidJS Jekyll filter support improvement contributions
 
 Through my work on my website, <hubelbauer.net>, I've come to learn more about
 Jekyll, Liquid and other stuff one should know when looking to use GitHub Pages,
